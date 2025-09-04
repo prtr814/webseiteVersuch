@@ -1,0 +1,24 @@
+@media (max-width: 750px) {
+    .outer-contianer {
+        flex-basis: auto;
+    }
+    .picture-contianer {
+        flex: 1 1 0;
+    }
+}
+@media (min-width: 750px) {
+    .outer-container {
+        flex-direction: row;
+    }
+}
+@media (min-width: 1150px) {
+    .picture-contianer {
+        flex: 0 0 38.2%;
+    }
+    .content-container {
+        flex: 0 0 61.8%;
+    }
+    .main-information-container {
+        flex-direction: row;
+    }
+}
