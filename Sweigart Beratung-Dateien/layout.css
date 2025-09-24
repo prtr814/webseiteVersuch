@@ -2,8 +2,24 @@ body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
-p, h1, h2, h3, span {
+h1, h2, h3 {
   font-weight: 100;
+  font-size: xx-large;
+}
+a {
+  color: inherit; /* Erbt die Textfarbe des übergeordneten Elements */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+}
+button {
+    font-weight: 100;
+    font-size: large;
+}
+label, textarea {
+    font-weight: 100;
+    font-size: medium;
+}
+div {
+    max-width: 100vw;
 }
 .outer-container {
     display: flex;
@@ -44,28 +60,42 @@ p, h1, h2, h3, span {
     flex: 1 1 50%;
     min-width: 0px;
     
-    padding: 5%;
+    padding: 3%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .main-information-container {
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 10px;
+    margin-bottom: 2%;
 }
 .main-anfahrt-container {
-    flex: 1 1 33.33%;
+    flex: 1;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.main-kontaktaufnahme-kontaktinformationen-container {
+    flex: 1;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .main-kontaktaunahme-container {
-    flex: 1 1 33.33%;
+    display: auto;
+    padding: 5% 0 2% 0;
+}
+.contact-form-input-window {
+    display: flex;
+    flex-direction: column;
 }
 .input-window{
-    width: 100%;
+    flex: 1;
     padding: 7px;
-    margin: 5px;
+    margin: 7px 0 7px 0;
     border: 1px solid;
     border-color: white;
     border-radius: 0;
@@ -76,23 +106,25 @@ p, h1, h2, h3, span {
     border-color: gray;
     background-color: rgba(0, 0, 0, 0);
 }
-.input-window-textarea {
-    height: 100px;
-}
 .input-window-label {
     display: none;
 }
+.kontaktaufnahme-consent-label {
+    margin: 7px 0 7px 0;
+    display: flex;
+    align-items: flex-start;
+}
 .form-submit-button button {
+    margin: 7px 0 7px 0;
     background-color: black;
     border: 0 solid;
     border-radius: 0;
     color: white;
-    padding: 7px;
+    padding: 10px;
 }
 
 
 .main-kontaktinformationen-container {
-    flex: 1 1 33.33%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -100,13 +132,15 @@ p, h1, h2, h3, span {
 
 
 .impressum-disclaimer-link {
+    position: inherit;
+    bottom: auto;
     border-top: 2px solid;
     border-color: gray;
     text-align: center;
     padding: 10%;
 }
 .impressum-disclaimer-popup-button {
-    padding: 20%;
+    padding: auto;
 }
 
 
@@ -133,30 +167,31 @@ p, h1, h2, h3, span {
     top: 50%;
     left: 50%;
     height: 80vh;
+    width: 80vw;
     transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template: 10% 1fr 5% / 1fr;
     
     padding: 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 0255);
     color: black;
         
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    position: absolute;
+    position: fixed;
 }
 .impressum-disclaimer-section {
-    height: 80%;
     overflow: auto;
     background-color: white;
     
     text-align: left;
 }
-.impressum-disclaimer-top-bottom {
-    height: 10%;
-}
-.impressum-disclaimer-top-bottom h2 {
-    height: 10%;
+.impressum-disclaimer-ueberschrift {
+    margin: 0px;
+    font-size: 100%;
 }
 .impressum-disclaimer-close-button {
-    margin: 5%;
+    margin: auto;
 }
 
 
